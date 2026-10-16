@@ -9,6 +9,14 @@ npm install
 npm run dev
 ```
 
+### Vercel
+
+El repositorio incluye `vercel.json` para que Vercel ejecute Next.js nativo con Webpack y genere `.next`. El comando `npm run build` se conserva para Cloudflare Sites mediante Vinext; para reproducir el build de Vercel localmente usa:
+
+```bash
+npm run build:vercel
+```
+
 El catálogo funciona sin base de datos desde `lib/menu-data.ts`. La ruta `GET /api/menu` expone únicamente lectura; no existen rutas públicas de escritura.
 
 ## Arquitectura de datos
