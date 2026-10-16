@@ -1,0 +1,10 @@
+import { Flame, Snowflake } from "lucide-react";
+export function Experience() {
+  return <section id="experiencia" className="scroll-mt-20 px-4 py-20 sm:px-6 sm:py-28"><div className="mx-auto max-w-7xl">
+    <p className="eyebrow text-center">Dos mundos · un mismo antojo</p><h2 className="section-title mx-auto mt-4 max-w-4xl text-center">El contraste es<br /><span className="text-gradient">parte del sabor.</span></h2>
+    <div className="mt-12 grid overflow-hidden rounded-[2rem] border border-white/10 lg:grid-cols-2">
+      <article className="min-h-[410px] bg-[radial-gradient(circle_at_20%_20%,rgba(255,107,40,.28),transparent_38%),linear-gradient(145deg,#2a0c08,#100c0d_70%)] p-7 sm:p-10"><span className="grid h-14 w-14 place-items-center rounded-2xl bg-[#ff6b28] text-white shadow-[0_20px_60px_rgba(255,79,30,.3)]"><Flame fill="currentColor" /></span><p className="mt-16 text-xs font-black uppercase tracking-[.2em] text-[#ff9c6f]">Zona fuego</p><h3 className="font-display mt-3 text-5xl font-black uppercase leading-[.9] text-white sm:text-6xl">Cruje.<br />Derrite.<br />Enciende.</h3><p className="mt-6 max-w-sm text-sm leading-6 text-white/55">Alitas, mazorcadas, costillas, picadas y salchipapas con todo el carácter volcánico.</p></article>
+      <article className="min-h-[410px] border-t border-white/10 bg-[radial-gradient(circle_at_80%_20%,rgba(32,191,229,.28),transparent_38%),linear-gradient(215deg,#062431,#0d1116_70%)] p-7 sm:p-10 lg:border-l lg:border-t-0"><span className="grid h-14 w-14 place-items-center rounded-2xl bg-[#20bfe5] text-[#052029] shadow-[0_20px_60px_rgba(32,191,229,.28)]"><Snowflake /></span><p className="mt-16 text-xs font-black uppercase tracking-[.2em] text-[#85e8ff]">Zona hielo</p><h3 className="font-display mt-3 text-5xl font-black uppercase leading-[.9] text-white sm:text-6xl">Fresco.<br />Frutal.<br />Explosivo.</h3><p className="mt-6 max-w-sm text-sm leading-6 text-white/55">Copas, bananas, ensaladas, malteadas y chamoyadas para bajar la temperatura.</p></article>
+    </div>
+  </div></section>;
+}

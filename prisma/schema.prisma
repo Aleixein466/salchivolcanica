@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id           String    @id @default(cuid())
+  name         String
+  slug         String    @unique
+  description  String?
+  imageUrl     String?
+  displayOrder Int       @default(0)
+  isActive     Boolean   @default(true)
+  products     Product[]
+}
+
+model Product {
+  id          String              @id @default(cuid())
+  categoryId  String
+  category    Category            @relation(fields: [categoryId], references: [id])
+  name        String
+  slug        String              @unique
+  description String?
+  imageUrl    String?
+  isAvailable Boolean             @default(true)
+  isFeatured  Boolean             @default(false)
+  variants    ProductVariant[]
+  ingredients ProductIngredient[]
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+}
+
+model ProductVariant {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name      String
+  priceCOP  Int
+  isActive  Boolean @default(true)
+}
+
+model ProductIngredient {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name      String
+}
+
+model RestaurantSettings {
+  id           String @id @default(cuid())
+  businessName String
+  slogan       String?
+  whatsapp     String?
+  address      String?
+  openingHours Json?
+  socialLinks  Json?
+}
