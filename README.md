@@ -1,6 +1,8 @@
 # Salchivolcánica
 
-Menú digital mobile-first para Salchivolcánica, Mocoa (Putumayo). Esta primera versión publica un catálogo de solo lectura con búsqueda, filtros, detalles y consulta por WhatsApp.
+Menú digital mobile-first para Salchivolcánica, Mocoa (Putumayo). Incluye catálogo con búsqueda y filtros, fotos reales destacadas, carrito persistente y envío del resumen del pedido por WhatsApp.
+
+El carrito guarda la selección en `localStorage`, admite variantes y cantidades y calcula un total estimado. WhatsApp recibe el resumen para que el restaurante confirme disponibilidad, domicilio y valor final; el sitio no simula un pago ni confirma automáticamente el pedido.
 
 ## Desarrollo local
 
